@@ -4,6 +4,7 @@
 # 課題
 - [ ] Github Pageへのデプロイ処理
 - [ ] index.htmlの.gitignore処理(gh-pageブランチだけに入れるような動作)
+  - okwrtdsh/deploy_from_travisが上2つの参考になる
 - [ ] ライセンス明記
 
 など
