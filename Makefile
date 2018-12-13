@@ -1,4 +1,4 @@
-all : index.html
+doc/index.html : slide.md
+	pandoc --standalone --self-contained --to=revealjs --slide-level=2 --mathjax -V transition=fade --output=$@ $<
 
-index.html : slide.md
-	pandoc -s -t revealjs -V transition=fade --mathjax -o $@ $<
+all : doc/index.html
