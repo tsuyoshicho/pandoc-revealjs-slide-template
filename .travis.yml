@@ -1,0 +1,13 @@
+language: r
+sudo: false
+script:
+  - make
+  - '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./deploy.sh'
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_dc581fd5e1d3_key -iv $encrypted_dc581fd5e1d3_iv -in "./deploy_key.enc" -out deploy_key -d
+  - chmod 600 deploy_key
+  - eval `ssh-agent -s`
+  - ssh-add deploy_key
+  - git config --global user.name "Travis-CI"
+  - git config --global user.email "travis-ci@example.com"
