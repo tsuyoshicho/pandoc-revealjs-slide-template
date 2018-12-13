@@ -2,8 +2,8 @@
 スライド資料のテンプレート ( [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book) の構成とMakefileを元にした)
 
 # 課題
-- [ ] Github Pageへのデプロイ処理
-- [ ] index.htmlの.gitignore処理(gh-pageブランチだけに入れるような動作)
+- [x] Github Pageへのデプロイ処理
+- [x] index.htmlの.gitignore処理(gh-pageブランチだけに入れるような動作)
   - [okwrtdsh/deploy_from_travis](https://github.com/okwrtdsh/deploy_from_travis) が上2つの参考になる
 - [ ] ライセンス明記
 
