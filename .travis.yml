@@ -1,9 +1,9 @@
 language: r
 sudo: false
-script:
+install:
   - make
 
-install:
+script:
   - '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./deploy.sh'
 
 before_install:
