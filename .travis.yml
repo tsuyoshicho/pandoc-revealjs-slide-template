@@ -5,9 +5,13 @@ script:
   - '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./deploy.sh'
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_dc581fd5e1d3_key -iv $encrypted_dc581fd5e1d3_iv -in "./deploy_key.enc" -out deploy_key -d
+  - echo $key_secret_password | gpg --passphrase-fd 0 deploy_key.gpg
   - chmod 600 deploy_key
   - eval `ssh-agent -s`
   - ssh-add deploy_key
   - git config --global user.name "Travis-CI"
   - git config --global user.email "travis-ci@example.com"
+
+env:
+  global:
+    secure: "o5S39zd1D0A3EqG++ziLUe4VhqLDr3i5+E7vXT+ejWOPbksVfErXRBITrCenutYPis2tCdbyTrdpnT1JZY5FSY9YDIwV9T/l9xLJs3BbmyMmXDbWsO7mSlUn+uM+8PDle7J9e2yVLzDjR+lzBHMH28jpCtX6rTZqe9OhPkoxZ2FZ4VG39rGsD+pi0zb5Glr3z+JW1iZr8HRBqCGqH/fLtnq4/gkf2uPbniOImdS96FpD9baUgF4346O49LxxezdcXnvHYJRo5d1AMmMmWGMQtU8q25lbvqetmvKh+b1Go3TMwYYzxdcIiUm2kSsf19j64272i/kkgDzosR8Uemp3uS1YCBzv7DCS+awKYFANFIrN1JhPRgEYpCvSXSz9wicalDQigkRiUfnJEJIze4fUgUvnFUh1yEEuOrkj59ONpxmHqsT9C1HI294QdR31xJaUu6kE8qyPhNc5xMLf+4fL6VcwAYlypAWhdefSbA8hLe54vKbTc46dwuCVYVF/8ZDkIpvjmcuV86u+kht/QwHTa7L6ZIBnG9N1zCpijDL97HtzXO4IgUbcfv5RTEcXkbjICiZOsOK4emUJO2WkgLqX26nkViI1997tPEw8mtEHpiYg065fU26wfr83bSdoKVMb31F1uSGDp34Gq8UyrMYX6CxSjSFrsNgINhqbCMNETbs="
