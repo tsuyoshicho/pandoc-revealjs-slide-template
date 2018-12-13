@@ -1,5 +1,5 @@
 # pandoc-reveal.js-slide-template
-スライド資料のテンプレート ( EzoeRyou/slide-cpp17bookの構成とMakefileを元にした)
+スライド資料のテンプレート ( [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book) の構成とMakefileを元にした)
 
 # 課題
 - [ ] Github Pageへのデプロイ処理
