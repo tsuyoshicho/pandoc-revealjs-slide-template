@@ -4,7 +4,7 @@
 cd doc
 
 # check and delete specific files
-rm -f deploy_key deploy_key.enc deploy.sh .travis.yml package.json
+rm -f deploy_key deploy_key.enc deploy_key.gpg deploy.sh .travis.yml package.json
 
 # deploy to gh-pagess
 git init
