@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 
-# work on doc dir
-cd doc
+# work on docs dir
+cd docs
 
 # check and delete specific files
 rm -f deploy_key deploy_key.enc deploy_key.gpg deploy.sh .travis.yml package.json
