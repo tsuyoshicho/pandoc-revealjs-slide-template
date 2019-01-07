@@ -3,8 +3,11 @@ sudo: false
 install:
   - make
 
+branches:
+  only:
+    - master
 script:
-  - '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./deploy.sh'
+  - bash ./deploy.sh
 
 before_install:
   - echo $key_secret_password | gpg --passphrase-fd 0 deploy_key.gpg
