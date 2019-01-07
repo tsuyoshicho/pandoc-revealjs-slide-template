@@ -5,7 +5,7 @@ set -e # Exit with nonzero exit code if anything fails
 set -u # Undefined variable use error
 
 # SOURCE_BRANCH="master"
-# SOURCE_BRANCH=${TRAVIS_BRANCH}
+SOURCE_BRANCH=${TRAVIS_BRANCH}
 TARGET_BRANCH="gh-pages"
 
 # Save some useful information
