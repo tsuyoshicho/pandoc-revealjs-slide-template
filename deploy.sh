@@ -1,4 +1,16 @@
-#!/bin/bash -eu
+#!/bin/bash
+# based on https://github.com/w3ctag/promises-guide
+set -e # Exit with nonzero exit code if anything fails
+# based on https://qiita.com/youcune/items/fcfb4ad3d7c1edf9dc96
+set -u # Undefined variable use error
+
+# SOURCE_BRANCH="master"
+# SOURCE_BRANCH=${TRAVIS_BRANCH}
+TARGET_BRANCH="gh-pages"
+
+# Save some useful information
+REPO=`git config remote.origin.url`
+SHA=`git rev-parse --verify HEAD`
 
 if [ ! -d './docs' ]; then
     echo "build failed"
@@ -14,5 +26,5 @@ rm -f deploy_key deploy_key.enc deploy_key.gpg deploy.sh .travis.yml package.jso
 # deploy to gh-pagess
 git init
 git add .
-git commit -m "Publishing site on `date "+%Y-%m-%d %H:%M:%S"`"
-git push -f git@github.com:${TRAVIS_REPO_SLUG}.git master:gh-pages
+git commit -m "Deploy to GitHub Pages: ${SHA} / Publishing site on `date "+%Y-%m-%d %H:%M:%S"`"
+git push -f git@github.com:${TRAVIS_REPO_SLUG}.git ${SOURCE_BRANCH}:${TARGET_BRANCH}
