@@ -1,6 +1,11 @@
 #!/bin/bash -eu
 
-# work on docs dir
+if [ ! -d './docs' ]; then
+    echo "build failed"
+    exit 0
+fi
+
+# work on doc dir
 cd docs
 
 # check and delete specific files
