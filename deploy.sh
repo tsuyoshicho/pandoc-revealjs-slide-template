@@ -5,7 +5,7 @@ set -e # Exit with nonzero exit code if anything fails
 set -u # Undefined variable use error
 
 # SOURCE_BRANCH="master"
-SOURCE_BRANCH=${TRAVIS_BRANCH}
+# SOURCE_BRANCH=${TRAVIS_BRANCH}
 TARGET_BRANCH="gh-pages"
 
 # Save some useful information
@@ -27,4 +27,4 @@ rm -f deploy_key deploy_key.enc deploy_key.gpg deploy.sh .travis.yml package.jso
 git init
 git add .
 git commit -m "Deploy to GitHub Pages: ${SHA} / Publishing site on `date "+%Y-%m-%d %H:%M:%S"`"
-git push -f git@github.com:${TRAVIS_REPO_SLUG}.git ${SOURCE_BRANCH}:${TARGET_BRANCH}
+git push -f git@github.com:${TRAVIS_REPO_SLUG}.git master:${TARGET_BRANCH}
