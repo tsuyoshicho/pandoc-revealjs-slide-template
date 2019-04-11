@@ -1,5 +1,5 @@
-# pandoc-reveal.js-slide-template
-[![Build Status](https://travis-ci.org/tsuyoshicho/pandoc-revealjs-slide-template.svg?branch=master)](https://travis-ci.org/tsuyoshicho/pandoc-revealjs-slide-template)
+# [Pandoc](https://pandoc.org/) reveal.js Slide Template
+[![Build Status](https://travis-ci.com/tsuyoshicho/pandoc-revealjs-slide-template.svg?branch=master)](https://travis-ci.com/tsuyoshicho/pandoc-revealjs-slide-template)
 
 スライド資料のテンプレート ( [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book) の構成とMakefileを元にした)
 
