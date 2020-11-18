@@ -3,15 +3,13 @@
 スライド資料のテンプレート ( [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book) の構成とMakefileを元にした)
 
 ## 利用方法
-- リポジトリセットアップ(git init)
-- templateとしてこのリポジトリ追加(git remote add)
-- マージして適用
-- gpg鍵の設定を更新
-  - [tsuyoshicho/sample-readme-direct-gh-pages](https://github.com/tsuyoshicho/sample-readme-direct-gh-pages)を参照
+- templateとしてこのリポジトリからリポジトリ生成
+- gh-pagesブランチを作る
 - slide.mdを更新
+- gh-pagasが更新されるので、閲覧できる設定にする(settings -> pages)
 
 ## 課題
-(とりあえずすべて解決)
+- なし
 
 ## LICENCE
 CC 4.0 BY-SA (成果物には適用しない、テンプレート自体への適用)
