@@ -3,13 +3,16 @@
 
 # git system files
 .gitattributes eol=lf
-.gitignore     eol=lf
+.gitmodules    eol=lf
+# gitignore contains Icon^M <- CRLF end
+# skip autocrlf,diff enable -> not binary, set -text
+.gitignore     -text
 
-.travis.yml    eol=lf
-deploy.sh      eol=lf
-Makefile       eol=lf
 
-deploy_key.gpg binary
+# Extension
+*.md           text eol=lf
 
-*.md           text
+# File
+Makefile       text eol=lf
 
+# EOF
