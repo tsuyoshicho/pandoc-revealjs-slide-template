@@ -1,5 +1,4 @@
 # [Pandoc](https://pandoc.org/) reveal.js Slide Template
-[![Build Status](https://travis-ci.com/tsuyoshicho/pandoc-revealjs-slide-template.svg?branch=master)](https://travis-ci.com/tsuyoshicho/pandoc-revealjs-slide-template)
 
 スライド資料のテンプレート ( [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book) の構成とMakefileを元にした)
 
@@ -21,6 +20,5 @@ CC 4.0 BY-SA (成果物には適用しない、テンプレート自体への適
 - Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>
 
 ## see also
-- [Pandocでreveal\.jsを使ったスライドを作成 \- Qiita](https://qiita.com/sukakako/items/a78478f94e934c47b993)
+- [Pandocでreveal.jsを使ったスライドを作成 - Qiita](https://qiita.com/sukakako/items/a78478f94e934c47b993)
 - [EzoeRyou/slide-cpp17book](https://github.com/EzoeRyou/slide-cpp17book)
-- [okwrtdsh/deploy_from_travis](https://github.com/okwrtdsh/deploy_from_travis)
