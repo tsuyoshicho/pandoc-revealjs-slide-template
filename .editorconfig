@@ -10,10 +10,7 @@ indent_style = space
 indent_size = 2
 
 # Extension
-[*.{vim,vital}]
-end_of_line = lf
-
-[*.sh]
+[*.md]
 end_of_line = lf
 
 # File
