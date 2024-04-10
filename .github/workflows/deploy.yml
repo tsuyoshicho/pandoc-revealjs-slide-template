@@ -18,7 +18,7 @@ jobs:
         with:
           args: "--standalone --self-contained --to=revealjs --slide-level=2 --mathjax -V transition=fade --output=docs/index.html slide.md"
       - name: Deploy gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
